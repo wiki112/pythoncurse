@@ -1,3 +1,4 @@
+'''
 x=1
 
 warunek=True
@@ -13,6 +14,24 @@ while warunek:
 
 
 
+for x in range(0,5,1):
+    print(f"{x}")
 
+
+
+
+    
+for p in range(-9,4,3):
+    print(f"{p}")
+
+
+'''
+linie=int(input("podaj liczbę linijek "))
+
+x=1
+while x <= int(linie):
+    gw= '*'*x
+    print(gw)
+    x+=1
 
 

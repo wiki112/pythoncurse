@@ -1,0 +1,18 @@
+print("hej jestem python!")
+print("jak masz na imie?")
+imie=input()
+print(f"czesc {imie} milo cie poznac")
+
+print("urodzilem sie godzine,temu, gdy zostal stworzony moj plik")
+rok_urodzenia=input("A ty kiedy sie urodziles? ")
+wiek= 2023-int(rok_urodzenia)
+print(f"hej widze ze masz {wiek} lat!")
+
+print("jaki jest twoj ulubiony kolor? ")
+color=input()
+print(f"czyli nazywasz sie {imie} urodziles sie w {rok_urodzenia} masz {wiek} lat i twoj ulubiony kolor to {color}.")
+
+
+
+
+

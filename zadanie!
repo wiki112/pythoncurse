@@ -1,0 +1,7 @@
+imie = "Wiktor"
+wzrost_metry =float(1.39)
+wiek = 10
+pelnoletni = False
+rok_urodzenia = 2023 - wiek
+wzrost_w_cm = 100 * wzrost_metry
+print(f"Mam na imie {imie}. Urodzilem sie w {rok_urodzenia} roku. Mam {wzrost_w_cm} cm wzrostu. Czy jestem pełnoletni? {pelnoletni}")

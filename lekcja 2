@@ -1,0 +1,112 @@
+'''
+x = 11
+a = 55.5
+b = "tekst" #to jest zienna z tekstem
+#komentarz
+c = True
+d = [1,2,3]
+x = "hejo"
+print(type(x))
+'''
+'''
+toJestZmiennaKtorejBendeUzywac = 5#camel case
+ToJestZmiennaKtorejBendeUzywac = 5#Pascal case
+to_jest_zmienna_ktorej_bendej_uzywac = 5 #Snake case
+To_Jest_Zmienna_Ktorej_Bendej_Uzywac = 5#upper case
+'''
+'''
+licznik = 5
+Licznik = 10
+LICZNIK = 15
+
+print(licznik,Licznik,LICZNIK)
+'''
+'''
+a = input()
+a = "5"
+c = 10 - int(a)
+'''
+'''
+a = int(3.2)
+print(a, type (a))
+b= int(True)
+print(b, type (b))
+c = int("55")
+print(c, type (c))
+print(d, type (d))
+'''
+'''
+e = int("lekcja")
+print(e, type(e))
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

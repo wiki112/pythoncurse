@@ -1,0 +1,5 @@
+print("Witamy na zjeżdzalni")
+print("prosze podać wzrost ")
+wzrost = int(input("twój wzrost to: "))
+wynik = wzrost > 150
+print(wynik)

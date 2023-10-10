@@ -1,0 +1,7 @@
+a = int(input("podaj liczbe a: "))
+b = int(input("podaj liczbe b: "))
+c = int(input("podaj liczbe c: "))
+czy_a_to_max = a > b and a > c
+czy_b_to_max = a < b and b > c
+czy_c_to_max = a < c and c > b
+print(czy_a_to_max,czy_b_to_max,czy_c_to_max)

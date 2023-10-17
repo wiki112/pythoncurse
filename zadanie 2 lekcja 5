@@ -1,0 +1,13 @@
+miesiąc = int(input("aby wiedzieć koszt atrakcji prosze podać liczbę miesiąca: "))
+if 1 <= miesiąc <= 2:
+    print("cena wynosi 150 zł")
+elif 3 <= miesiąc <= 4:
+    print("cena wynosi 199 zł")
+elif 5 <= miesiąc <= 6:
+    print("cena wynosi 249 zł")
+elif 7 <= miesiąc <= 8 or miesiąc <= 9:
+    print("cena wynosi 299 zł")
+elif  miesiąc >= 10:
+    print("cena wynosi 199 zł")
+elif 11 <= miesiąc >= 12:
+    print("cena wynosi 99 zł")

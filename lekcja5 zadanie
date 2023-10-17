@@ -1,0 +1,7 @@
+wygrane = int(input("podaj liczbę wygranych: "))
+przegrane = int(input("podaj liczbe przegranych: "))
+MVP = int(input("podaj liczbę oznaczeń MVP: "))
+if wygrane >= 10 and wygrane > przegrane or MVP > 6: 
+    print("przechodzisz dalej")
+else: 
+    print("Nie przechodzisz dalej")

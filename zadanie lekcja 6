@@ -1,0 +1,5 @@
+slowo = input("podaj słowo ")
+if "a" in slowo or "d" in slowo or "as" in slowo or "zzz" in slowo:
+    print(f"{slowo} posiada jedna z wyszukanych frag.")
+else:
+    print(f"{slowo} nie posiada zadnej z wyszukanych frag.")

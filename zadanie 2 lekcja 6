@@ -1,0 +1,11 @@
+login = "0402a1c"
+haslo_maslo = "fireinthehouse"
+podany_login = input('podaj login: ')
+if podany_login == login:
+    podane_haslo = input("podaj haslo: ")
+    if podane_haslo == haslo_maslo:
+        print("login oraz haslo poprawne.")
+    else:
+        print("zle haslo")      
+else:
+    print("zly login")

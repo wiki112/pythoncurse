@@ -1,0 +1,11 @@
+pin = "1234"
+haslo = "maslo"
+pin_pytany = input("podaj cztero liczbowy pin: ")
+if pin_pytany != pin:
+    print("Zly pin.")
+else:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    haslo_pytane = input("podaj haslo: ")
+    if haslo_pytane != haslo:
+        print("Zle haslo.")
+    else:
+        print("Poprawny pin oraz login.")

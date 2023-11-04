@@ -1,0 +1,9 @@
+print("Bede twoim echo")
+
+while True:
+    odp = input("Napisz cos: ")
+
+    if odp == "exit":
+        break
+
+    print("Echo: ", odp)

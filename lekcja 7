@@ -1,0 +1,19 @@
+i=0
+while i < 25:
+    print("cześć gigańcie!)")
+    i = i +1
+pass
+print("aaaa")
+
+liczba = int(input("podaj liczbe: "))
+i = 0
+while i < liczba:
+    print("Giganci Programowania")
+    i = i + 1
+
+
+
+liczba = int(input("podaj liczbe: "))
+while 0 < liczba:
+    print("Giganci Programowania")
+    liczba = liczba - 1

@@ -1,0 +1,10 @@
+l1 = int(input("Podaj liczbe: "))
+if l1 % 3 == 0:
+    print("Liczba jest podzielna przez 3")
+if l1 % 10 == 0:
+    print("Liczba jest podzielna przez 10")
+if l1 % 77 == 0:
+    print("Liczb ajest podzielna przez 77")
+
+if l1 % 3 == 0 and l1 % 10 == 0 and l1 % 77 == 0:
+    print("Liczba jest podzielna przez 3,10,77")

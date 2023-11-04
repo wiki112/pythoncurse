@@ -1,0 +1,9 @@
+import time
+
+bomba = int(input("podaj liczbe: "))
+while bomba > 0:
+    print(bomba)
+    bomba = bomba - 1
+    time.sleep(1)
+
+print("BOOM")

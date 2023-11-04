@@ -1,0 +1,21 @@
+import random
+MIN = 0
+MAX = 100
+
+wylosowana_liczba = random.randint(MIN, MAX)
+
+#print(wylosowana_liczba)
+licznik_tur = 0
+odpowiedz = none
+
+while odpowiedz != wylosowana_liczba:
+    odpowiedz = int(input("podaj liczbe"))
+    licznik_tur += 1
+
+    if odpowiedz < wylosowana_liczba:
+        print za malo
+    elif odpowiedz > wylosowana_liczba:
+        print("za duzo")
+
+print("gratulacje, zgadles!")
+print(f"liczba tur: {licznik_tur}

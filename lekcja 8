@@ -1,0 +1,10 @@
+
+suma = 0
+while True:
+    zmienna = input("podaj liczbe: ")
+    if zmienna == "koniec":
+        break
+
+    suma += int(zmienna)
+
+print(f"suma wynosi {suma}.")

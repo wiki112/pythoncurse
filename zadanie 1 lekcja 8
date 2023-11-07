@@ -1,0 +1,5 @@
+wiek_rocznikowy = 11
+for i in range(wiek_rocznikowy + i):
+    rok_kalendarzowy = 2023 - wiek_rocznikowy + i
+    wiek_w_danym_roku = 1
+    print(f"W roku {rok_kalendarzowy} miales {wiek_w_danym_roku} lat!")

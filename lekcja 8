@@ -1,4 +1,5 @@
 
+
 suma = 0
 while True:
     zmienna = input("podaj liczbe: ")
@@ -8,3 +9,107 @@ while True:
     suma += int(zmienna)
 
 print(f"suma wynosi {suma}.")
+
+
+
+
+for i in range(1,11):
+    line = ""
+    for b in range(1,11):
+        line += str(i*b).center(4) + "|"
+    print(line)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

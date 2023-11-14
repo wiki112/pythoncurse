@@ -1,0 +1,7 @@
+lista = []
+liczba = 10
+
+for el in range(liczba):
+    lista.append(input("podaj element: "))
+for el in range(liczba):
+    print(lista[el])

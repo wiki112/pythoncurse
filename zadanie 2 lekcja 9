@@ -1,0 +1,12 @@
+oceny = []
+while True :
+    ocena = input("podaj ocenę: ")
+    if ocena == "q":
+        break
+
+    ocena = int(ocena)
+    oceny.append(ocena)
+    print(oceny)
+suma = sum(oceny)
+srednia = suma / len(oceny)
+print(f"twoja srednia to {srednia}!")

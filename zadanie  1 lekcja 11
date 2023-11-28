@@ -1,0 +1,9 @@
+def foo(znak,lista):
+    nowe_slowo = lista[0]
+    for i in lista[1:]:
+        nowe_slowo += znak
+        nowe_slowo += i
+
+    return nowe_slowo
+a = foo("?",["drzewo", "krzak", "ulica"])
+print(a)

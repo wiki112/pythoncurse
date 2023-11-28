@@ -1,0 +1,5 @@
+def losowe(lista,min,max):
+    lista = []
+    for i in range(liczba):
+        lista.append(randim.radint(min,max))
+    return lista

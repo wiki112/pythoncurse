@@ -1,0 +1,7 @@
+def unikalne(lista):
+    nowa_lista = []
+    for el in lista:
+        if el not in nowa_lista:
+            nowa_lista.append(el)
+    return nowa_lista
+print(unikalne([1,1,1,1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5]))

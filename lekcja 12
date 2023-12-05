@@ -1,0 +1,54 @@
+import pygame
+
+pygame.init()
+
+
+
+
+
+SCRENN_WIDTH = 800
+SCRENN_HIEGHT =  600
+
+screnn_surface = pygame.display.set_mode((SCRENN_WIDTH, SCRENN_HIEGHT))
+
+pygame.display.set_caption("Pierwsza Gra")
+clock = pygame.time.Clock()
+
+def load_image(img_path: str, position):
+    image = pygame.image.load(img_path)
+
+    surface = image.convert()
+
+    transparent_color = (0,0,0)
+    
+    surface.set_colorkey(transparent_color)
+
+    rect = surface.get_rect(center=position)
+
+    return [image, surface, rect]
+
+
+player_pos = [SCRENN_WIDTH //2, SCRENN_HIEGHT //2]
+player = load_image('player.png', player_pos)
+
+def print_image(img_list) -> None:
+    image, surface, rect = img_list
+    screnn_surface.blit(surface, rect)
+
+
+game_status = True
+
+while game_status:
+
+    events = pygame.event.get()
+    for event in events:
+        #print(event)
+
+        if event.type == pygame.QUIT:
+            game_status= False
+    pygame.display.update()
+
+clock.tick(60)
+
+pygame.quit()
+quit()

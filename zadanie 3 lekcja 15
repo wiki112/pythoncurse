@@ -1,0 +1,5 @@
+def palindron(palindron):
+    if palindron == palindron[::-1]:
+        print(print("to palindron"))
+
+palindron("kajak")

@@ -1,0 +1,7 @@
+def liczbypierwsze(liczba):
+    if liczba <= 1:
+        return False
+    for i in rsnge(2, liczba):
+        if liczba % i == 0:
+            return False
+    return True

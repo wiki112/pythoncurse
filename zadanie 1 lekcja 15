@@ -1,0 +1,11 @@
+def zadanie_1(binarna) :
+    y = ""
+    while (binarna > 0):
+        wynik = binarna % 2
+        binarna = binarna // 2
+        y = str(wynik) + y
+    return(y)
+
+
+
+print(zadanie_1(41))

@@ -1,0 +1,46 @@
+def menu_glowne():
+    print("wybierz opcje")
+    print("1, wyplata")
+    print("2, wplata")
+    print("3, sprawdzenie salda")
+    print("4 zakoncz")
+def pobierz_wybor_klijenta():
+    return int(input("Twoj wybor to: "))
+def pobierz_kwote(tekst):
+    return  float(input(tekst))
+def wplata(saldo):
+    kwota_wplaty = pobierz_kwote("ile chcesz wplacic ")
+
+    if kwota_wplaty > 5000:
+        print("Nie udalo sie wplacic. Przekroczony limit!")
+        return saldo
+    
+    else:
+        saldo = saldo + kwota_wplaty
+        print("Sukcesywnie wplacono")
+        return saldo
+def pokarz_stan_konta(saldo):
+    print(f"Stan konta wynosi {saldo} zlotych")
+
+    
+saldo = 0
+wybur = 0
+while wybur != 4:
+    menu_glowne()
+    wybur = pobierz_wybor_klijenta()
+
+    if wybur == 1:
+        kwota_wyplaty = pobierz_kwote("ile chcesz wyplacic: ")
+        if kwota_wyplaty > saldo:
+            print("Operacja niieudana.Brak srodlow na koncie!")
+        else:
+            saldo -= kwota_wyplaty
+            print(f"wyplacono {kwota_wyplaty} zlottych!")
+    elif wybur == 2:
+        saldo = wplata(saldo)
+    elif wybur == 3:
+        pokarz_stan_konta(saldo)
+    elif wybur == 4:
+        pass
+    else:
+        print("niepoprawne dane")

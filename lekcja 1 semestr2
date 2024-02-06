@@ -1,0 +1,39 @@
+'''
+for x in range(1,101):
+    if x%3==0 and x%5==0:
+        print("FizzBuzz")
+    elif x%3==0:
+        print("Fizz")
+    elif x%5==0:
+        print("Buzz")
+    else:
+        print(x)
+
+y=0
+i = int(input("podaj liczbę: "))
+x = 1
+while i != 0:
+    y += 1
+    print(f"{y}"*x)
+    x += 1
+    i -= 1
+
+lista = [1,2,3,4,5,6,7,8,9,10]
+x = min(lista)
+y = max(lista)
+print(f"najmniejsza liczba w liście to {x} a największa {y}")
+
+import random
+y = (input("co będzie kolejne orzeł czy reszka 1 to orzeł a 2 to reszka "))
+x = random.randint(1,2)
+if x == 1:
+    if y == "orzeł" or y == "orzel":
+        print("zgadłeś/zgadłaś odpowiedź to orzeł + 10 punktów")
+    elif y != "orzeł" or y != "orzeł":
+        print(f"twoja odpowiedź jest niepoprawna odpowiedź to {x} + 10 punktów dla komputera")
+elif x == 2:
+    if y == "reszka":
+        print("zgadłeś/zgadłaś odpowiedź to reszka + 10 punktów")
+    elif y != "reszka":
+        print(f"twoja odpowiedź jest niepoprawna odpowiedź to {x} + 10 punktów dla komputera")
+'''

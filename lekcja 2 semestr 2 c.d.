@@ -1,0 +1,16 @@
+from User import User
+
+user1 = User()
+user1.Imie = "Wiktor"
+user1.Wiek = 16
+user1.kolor = "Niebieski"
+
+
+user2 = User()
+user2.Imie = "Julek"
+user2.Wiek = 21
+user2.kolor = "zielony"
+
+user1.wyswietl()
+user2.wyswietl()
+

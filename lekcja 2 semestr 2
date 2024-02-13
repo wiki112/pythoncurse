@@ -1,0 +1,11 @@
+class User():
+    Imie = ""
+    Wiek = 0
+    kolor = ""
+
+    def wyswietl(self):
+        print(f"{self.Imie} lub kolor {self.kolor}")
+        if (self.Wiek >= 18):
+            print(f"{self.Imie} jest pelnoletni bo ma {self.Wiek} lat.")
+        else:
+            print(f"{self.Imie} nie jest pelnoletni bo ma {self.Wiek} lat.")

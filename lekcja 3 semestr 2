@@ -1,0 +1,97 @@
+class zwierze():
+
+    def __init__(self, wiek, imie):
+        self.wiek = wiek
+        self.imie = imie
+
+    def wydajdwiek(self):
+        print(f"{self.imie} wydae dzwiek!")
+
+
+    def jedz(self):
+        print(f"{self.imie} je!")
+
+class pies(zwierze):
+
+    def __init__(self, wiek, imie):
+        super().__init__(wiek, imie)
+        self.rasa = "mops"
+
+    def wypiszrase (self):
+        print(f"{self.imie} jest rasy: {self.rasa}")
+
+
+
+
+class Kot(zwierze):
+    def __init__(self, wiek, imie):
+        super().__init__(wiek, imie)
+        self.rasa = "Pers"
+
+    def wyplujklki(self):
+        print(f"{self.imie} wypluj klaki")
+
+
+
+pies1 = pies(8, "Kajtek")
+pies1.jedz()
+pies1.wydajdwiek()
+pies1.wypiszrase()
+
+class Ptak(zwierze):
+    def __init__(self, wiek, imie):
+        super().__init__(wiek, imie)
+
+    def lec(self):
+        print(f"{self.imie} leci")
+
+class Orzel(Ptak):
+    def __init__(self, wiek, imie):
+        super().__init__(wiek, imie)
+
+    def poluj(self):
+        print(f"{self.imie} poluje")
+
+
+orzel1 = Orzel(8, "Kacper")
+orzel1.jedz()
+orzel1.wydajdwiek()
+orzel1.lec()
+orzel1.poluj()
+
+
+
+
+
+
+
+
+
+class figura():
+    def wyswietlpole(self):
+        print(self.pole)
+    def wyswietobwod(self):
+        print(self.obwod)
+
+
+
+class kolo(figura):
+    def __init__(self, r):
+        self.obwod = r
+        self.pole = 3.14 * r * r
+        self.obwod = 2 * 3.14 * r
+
+
+
+kolo1 = kolo(4)
+kolo1.wyswietobwod()
+kolo1.wyswietlpole()
+
+
+
+class prostokat(figura):
+    def __init__(self, x ,y ):
+        self.wysokosc = x
+        self.serokosc = y
+        self.pole = 3.14 * x * y
+        self.obwod = 2 * 3.14 * x * y

@@ -9,3 +9,75 @@ class User():
             print(f"{self.Imie} jest pelnoletni bo ma {self.Wiek} lat.")
         else:
             print(f"{self.Imie} nie jest pelnoletni bo ma {self.Wiek} lat.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''class Samochod:
+    licznik1 = 0
+    kolor = " "
+    marka = " "
+    maxPredkosc = 0.0
+    liczaMiejsc = 0
+    def __init__(self, kolor,marka,maxPredkosc,liczbaMiejsc): 
+        print("Utworzenie obiektu typu Samochód... ")
+        self.licznik2 = 9
+        Samochod.licznik1 += 1
+        self.kolor = kolor
+        self.marka = marka
+        self.maxPredkosc = maxPredkosc
+        self.liczaMiejsc = liczbaMiejsc
+
+
+
+
+
+    def wyswetl(self):
+        print(self.kolor)
+        print(self.marka)
+        print(self.maxPredkosc)
+        print(self.liczaMiejsc)
+        
+auto1 = Samochod("Czerwony" , "Lambo", 300 , 2)
+
+print(Samochod.licznik1)'''
+
+
+
+Pi = 3.14
+class kolo:
+    promien = 0
+    def __init__(self, r):
+        self.promien = r
+        self.pole = Pi * self.promien * self.promien
+        print(f"Pole koła wynosi {self.pole}")
+        self.obwod = Pi * self.promien * 2
+        print(f"Obwód koła wynosi {self.obwod}")
+
+class prostokat:
+    szerokosc = 0
+    wysokosc = 0
+    def __init__(self,w,s):
+        self.szerokosc = s
+        self.dlugosc = w
+        self.pole1 = self.wysokosc * self.szerokosc
+        print(f"Pole prostokąta wynosi{self.pole1}")
+        self.obwod2 = 2 * self.wysokosc + 2 * self.szerokosc
+        print(f"Obwód prostokąta wynosi {self.obwod2}")
+kolo1 = kolo(10)
+prostokat1 = prostokat(10,5)

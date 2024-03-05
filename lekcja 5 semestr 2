@@ -1,0 +1,84 @@
+from  random import randint, choice
+class postac:
+    def __init__(self):
+        self.nazwa = ""
+        self.zdrowie = 0
+        self.zdrowie_max = 0
+        self.stamina = 0
+        self.stamina_max = 0
+
+    def atakuj(self , przeciwnik):
+        atak = randint(0,3)
+        if atak == 0:
+            print(f"{przeciwnik.nazwa} unika ataku {self.nazwa}")
+
+        else:
+            print(f"{przeciwnik.nazwa} zaostal trafiony przez {self.nazwa}. Zadano {atak} obrazen")
+            przeciwnik.zdrowie =- atak
+
+class przeciwnik(postac):
+    def __init__(self, gracz):
+        super().__init__()
+        self.nazwa = choice(("goblin","szkielet","pajak","zombie","wiedzma","duch"))
+        self.zdrowie = randint(1, gracz.zdrowie)
+class gracz(postac):
+    def __init__(self):
+        super().__init__()
+        self.zdrowie = 10
+        self.zdrowie_max = 10
+        self.nazwa = input("podaj imie gracza ")
+
+    def odpoczynek(self):
+        print(f"{self.nazwa} opoczywa, poziom zdrowia: {self.zdrowie} / {self.zdrowie_max}")
+        self.zdrowie += 1
+        if self.zdrowie > self.zdrowie_max:
+            self.zdrowie = self.zdrowie_max
+
+    def walka(self, przeciwnik ):
+        walka = True
+        while walka:
+            print(f"zdrowie gracz: {self.zdrowie}")
+            print(f"zdrowe wroga: {przeciwnik.zdrowie}")
+
+            akja_walki = input("wybierz akje (atak, ucieczka)")
+            if akja_walki == "atak":
+                self.atakuj(przeciwnik)
+                if przeciwnik.zdrowie <= 0:
+                    print(f"{self.nazwa} zabija {przeciwnik.nazwa}")
+                    return True
+                przeciwnik.atakuj(self)
+            elif akja_walki == "ucieczka":
+                print(f"{self.nazwa} ucieka")
+                przeciwnik.atakuje(self)
+                walka = False
+            else:
+                print("nieznana akcja")
+            
+            if self.zycie <= 0:
+                print(f"{self.nazwa} ginie!")
+                return False
+        return False
+    
+
+
+
+gracz1 = gracz()
+gra = True
+while gra:
+
+
+    akcja= input("Podaj akcje: zwiedzaj , odpocznij ")
+
+    if akcja == "zwiedzaj":
+
+        if randint(0, 1) == 0:
+            print(f"{gracz1.nazwa} zanalazł jaskinie!")
+        else:
+            przeciwnik1 = przeciwnik(gracz1)
+            print(f"{gracz1.nazwa} napodkal {przeciwnik1.nazwa}")
+            gra = gracz1.walka(przeciwnik1)
+            gra = gracz1.odpoczynek()
+    elif akcja == "odpocznij":
+        gracz1.odpoczynek()
+    else:
+        print("nieznana akcja!")

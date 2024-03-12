@@ -1,0 +1,43 @@
+import pygame
+
+class Obraz(pygame.sprite.Sprite):
+    def __init__(self, sciezka):
+        super().__init__()
+        self.obraz = pygame.image.load(sciezka)
+
+class element():
+    def __init__(self, typ):
+        self.wybrany = 0
+        self.lista_obrazow = []
+
+        for i in range(1 ,4):
+            sciezka = f"images/{typ}{i}.png"
+            czytany_obraz = Obraz(sciezka)
+            self.lista_obrazow.append(czytany_obraz)
+
+
+    def wybierznastepny(self):
+        self.wybrany += 1 
+        if self.wybrany > 2:
+            self.wybrany = 0
+
+    def wybranyobraz(self):
+        return self.lista_obrazow(self.wybrany).obraz
+    
+class nakrycieglowy(element):
+    def __init__(self):
+        super().__init__("head")
+
+
+class ubranie(element):
+    def __init__(self):
+        super().__init__("body")
+
+
+class oczy (element):
+    def __init__(self):
+        super().__init__("eye")
+
+class weapon(element):
+    def __init__(self):
+        super().__init__("weapon")

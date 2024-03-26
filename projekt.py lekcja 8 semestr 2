@@ -1,0 +1,49 @@
+import pygame
+import random
+import time
+from jablko import Jablko
+SZEROKOSC_EKRANU = 800
+WYSOKOSC_EKRANU = 600
+# tło 25 x 19
+
+tlo = pygame.Surface((SZEROKOSC_EKRANU, WYSOKOSC_EKRANU ))
+for i in range(25):
+    for j in range(19):
+        obraz = pygame.image.load('images/background.png')
+        maska = (random.randrange(0,20), random.randrange(0,20), random.randrange(0,20))
+        obraz.fill(maska, special_flags=pygame.BLEND_ADD)
+        tlo.blit(obraz, (i *32, j * 32))
+
+pygame.init()
+
+ekran = pygame.display.set_mode([SZEROKOSC_EKRANU, WYSOKOSC_EKRANU])
+zegar = pygame.time.Clock()
+zegar.tick(30)
+jablko = Jablko()
+jablka = pygame.sprite.Group()
+jablka.add(jablko)
+
+game_on = True
+
+while game_on:
+    for event in pygame.event.get():
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                game_on = False
+
+        elif event.type == pygame.QUIT:
+            game_on = False
+
+    ekran.blit(tlo, (0,0))
+    for jablko in jablka:
+        ekran.blit(jablko.obraz, jablko.rect)
+
+    
+    pygame.display.flip()
+
+
+
+
+time.sleep(3)
+
+pygame.quit()

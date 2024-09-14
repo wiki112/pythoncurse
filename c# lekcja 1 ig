@@ -1,0 +1,70 @@
+/* KZG - AI Chatbot do gry */
+using System;
+using System.Collections.Generic;
+
+class HelloWorld
+{
+    static void Main()
+    {
+        bool uruchomiony = true;
+        while (uruchomiony)
+        {
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.WriteLine("AI: Witaj w frotnite AI czatbot! Jak moge ci pomóc");
+            Console.BackgroundColor = ConsoleColor.Green;
+            string wprowadzonyTekst = Console.ReadLine().ToLower();
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Zadane pytnie:  " + wprowadzonyTekst);
+            Console.WriteLine("------------------------");
+            if (SprawdzSlowaKluczowe(wprowadzonyTekst, "koniec"))
+            {
+                uruchomiony=false;
+                Console.WriteLine("AI: Dziekujemy za skorzystanie z fortnite AI!Chatbot! powodzenia w grze");
+            }
+            else if (SprawdzSlowaKluczowe(wprowadzonyTekst, "broń"))
+            {
+                Console.WriteLine(("AI: Najlepsze bronie  znajdziesz w skrzynkach," + "dobre bronie czesto występują w safach"));
+
+            }
+            else if (SprawdzSlowaKluczowe(wprowadzonyTekst, "strategia"))
+            {
+                Console.WriteLine("AI:Kluczowe strategie gry obejmują atak, obronę, flankowanie i rotację.Skup się na tych aspektach, aby poprawić swoje umiejętności.");
+            }
+            else if (SprawdzSlowaKluczowe(wprowadzonyTekst, "budowanie"))
+            {
+                Console.WriteLine("AI: Ćwicz regularnie budowanie, używając kreatywnego trybu gry. Używaj\r\nszybkich klawiszy do budowania i staraj się opanować podstawowe struktury, takie jak rampy i ściany");
+            }
+            else
+            {
+                Console.WriteLine("AI: Przepraszam ale nie rozumiem tego pytania spróbuj zapytać inne jak budowanie, broń lub strategia");
+            }
+        }
+
+            Console.ReadLine();
+    }
+
+    static Dictionary<string, List<string>> slowaKluczowe = new Dictionary<string, List<string>>()
+    {
+        { "broń", new List<string> { "broń", "bron", "ekwip", "eq" , "ziemniak", "ziemnior"} },
+        { "materiały", new List<string> {"mat", "materi", "skrzyn", "surowce" } },
+        { "koniec", new List<string> { "bye", "dzieki", "dzięki", "wyjście", "exit", "wyjsc", "koniec", "nara" ,"toodles"}},
+        { "strategia", new List<string> { "strateg", "atak", "obron", "flank", "rotacj" } },
+        { "budowanie", new List<string> { "bud", "kamien", "metal", "drewn" } },
+    };
+
+    static bool SprawdzSlowaKluczowe(string userInput, string category)
+    {
+        if (slowaKluczowe.ContainsKey(category))
+        {
+            foreach (var keyword in slowaKluczowe[category])
+            {
+                if (userInput.Contains(keyword))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+}
+

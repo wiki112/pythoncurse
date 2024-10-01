@@ -1,0 +1,5 @@
+cd C:\Users\13-19latDesktop
+set /a i=0
+:arpmd %i%
+set /a i = %i% + 1
+goto a

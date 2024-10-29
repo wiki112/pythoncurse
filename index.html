@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Codinggiants </title>
+    <!-- Dodanie tej ładnej ikonki co pojawia się w zakładkach przeglądarki obok tytułu strony -->
+    <link rel="icon" type="image/x-icon" href="https://panel.giganciprogramowania.edu.pl/app/favicon.ico">
+    
+    <!-- dodanie czcionki spoza zestawu domyślnych -->    
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    
+    <!-- Dodanie osobnego pliku tylko dla stylów -->
+    <link rel="stylesheet" href="style.css" >
+    <!-- Style też można opisywać w pliku html w specjalnym tagu style --> 
+    <style>
+        #login-button {
+            border: 0px;
+            margin-top: 15px;
+            padding: 15px 25px 15px 25px;
+            font-weight: bold;
+            background-color: rgb(237,127,44);
+            color:white;
+            border-radius: 25px;
+            
+            
+        }
+    </style>
+</head>
+<body onload="alert('strona się ładuje')">
+    <!-- pudełka na rózne elementy --> 
+    <div id="left-box">
+        <!-- Uzupełniamy 2 obrazki --> 
+        <img id="logo" src="logo.png" alt="Logo Gigantów programowania"></img>
+        <!-- style tzw inline-->
+        <img id="uczniowie" src="uczniowie.png"Grafika przedstawiająca kilku siedzących razem uczniów" style="height: 50%;   position: absolute;  top: 50%;  left: 50%;  transform: translate(-50%, -50%);"></img>
+    </div>
+    
+    <!-- pudełka na rózne elementy -->
+        <div id="right-box">
+        <!-- style tzw. inline --> 
+        <form style="width: 400px; padding: 15%">
+            <h1 >Zaloguj się do serwisu</h1>
+            <!-- style które używamy kilka razy "class"-->
+            <input class="input" type="text" placeholder="Twój adres email">
+            <input class="input" type="text" placeholder="Hasło">
+            
+            <!-- style które są TYLKO w jednym miejscu wpisujemy jako id="nazwa" -->
+             <input id="login-button" type="submit" value="Zaloguj się" onclick="alert('Test')">
+        </form>
+    </div>
+</body>
+</html>

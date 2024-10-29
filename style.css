@@ -1,0 +1,43 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    color: rgb(14, 12, 12);
+}
+
+#logo {
+    height: 150px;
+}
+
+.input {
+    border-radius: 25px;
+    height: 50px;
+    width: 350px;
+    padding-left:20px;
+    border: 3px solid rgb(211, 211, 211);
+    margin-top: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+#left-box {
+    width: 58%;
+    background-color: rgb(237, 127, 44);
+    float: left;
+    height: 100vh;
+    position: relative;
+}
+
+#right-box {
+    width: 42%;
+    background-color: white;
+    float: left;
+    height: 100vh;
+    display: flex;
+
+    align-items: center;
+}
+
+
+
